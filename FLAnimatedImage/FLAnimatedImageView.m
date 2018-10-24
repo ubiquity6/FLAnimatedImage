@@ -438,5 +438,10 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
     layer.contents = (__bridge id)self.image.CGImage;
 }
 
+// HACK This gets SCNMaterial.diffuse.contents to recognize the alpha in UIImageView
+- (void)retainMaterialToAnimate:(SCNMaterial *)material
+{
+    self.gifMaterial = material;
+}
 
 @end
