@@ -439,9 +439,10 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
     layer.contents = (__bridge id)self.image.CGImage;
 }
 
-- (void)retainMaterialToAnimate:(SCNMaterial *)material
+- (void)retainPlaneToAnimate:(SCNPlane *)plane
 {
-    self.gifMaterial = material;
+    self.gifPlane = plane;
+    self.gifMaterial = plane.firstMaterial;
 }
 
 @end
