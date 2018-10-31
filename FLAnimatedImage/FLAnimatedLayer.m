@@ -55,7 +55,7 @@
 {
     self.runLoopMode = [[self class] defaultRunLoopMode];
     
-    self.bounds = CGRectMake( 0, 0, 1000, 1000);
+    self.bounds = CGRectMake( 0, 0, 100, 100); // initialize with something.
     self.anchorPoint = CGPointMake(0.0, 1.0);
     self.backgroundColor = [UIColor clearColor].CGColor;
 }
@@ -79,6 +79,9 @@
         
         self.currentFrame = animatedImage.posterImage;
         self.contents =  (__bridge id)self.currentFrame.CGImage;
+        CGSize size = animatedImage.posterImage.size;
+        self.bounds = CGRectMake(0,0, size.width, size.height);
+        
         self.currentFrameIndex = 0;
         if (animatedImage.loopCount > 0) {
             self.loopCountdown = animatedImage.loopCount;
