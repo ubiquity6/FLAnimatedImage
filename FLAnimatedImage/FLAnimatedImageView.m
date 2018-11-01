@@ -381,7 +381,6 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
         UIImage *image = [self.animatedImage imageLazilyCachedAtIndex:self.currentFrameIndex];
         if (image) {
             FLLog(FLLogLevelVerbose, @"Showing frame %lu for animated image: %@", (unsigned long)self.currentFrameIndex, self.animatedImage);
-            self.gifMaterial.diffuse.contents = image;
             self.currentFrame = image;
             if (self.needsDisplayWhenImageBecomesAvailable) {
                 [self.layer setNeedsDisplay];
@@ -439,10 +438,5 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
     layer.contents = (__bridge id)self.image.CGImage;
 }
 
-- (void)retainPlaneToAnimate:(SCNPlane *)plane
-{
-    self.gifPlane = plane;
-    self.gifMaterial = plane.firstMaterial;
-}
 
 @end
