@@ -32,6 +32,7 @@
 // To keep scrolling smooth on single-core devices such as iPhone 3GS/4 and iPod Touch 4th gen, the default run loop mode is NSDefaultRunLoopMode. Otherwise, the default is NSDefaultRunLoopMode.
 @property (nonatomic, copy) NSString *runLoopMode;
 
+- (instancetype)initWithAnimatedImage: (FLAnimatedImage*)animatedImage;
 - (void)displayDidRefresh:(CADisplayLink *)displayLink;
 
 @end

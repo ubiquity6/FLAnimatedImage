@@ -41,6 +41,15 @@
     return self;
 }
 
+- (instancetype)initWithAnimatedImage: (FLAnimatedImage*)animatedImage {
+  self = [super init];
+  if (self) {
+    [self commonInit];
+    self.animatedImage = animatedImage;
+  }
+  return self;
+}
+
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
