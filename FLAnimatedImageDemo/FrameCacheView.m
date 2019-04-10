@@ -1,6 +1,6 @@
 //
 //  FrameCacheView.m
-//  FLAnimatedImageDemo
+//  UFLAnimatedImageDemo
 //
 //  Created by Raphael Schaad on 4/1/14.
 //  Copyright (c) 2014 Flipboard. All rights reserved.
@@ -8,12 +8,12 @@
 
 
 #import "FrameCacheView.h"
-#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <UFLAnimatedImage/UFLAnimatedImage.h>
 
 
 @implementation FrameCacheView
 
-- (void)setImage:(FLAnimatedImage *)image
+- (void)setImage:(UFLAnimatedImage *)image
 {
     if (![_image isEqual:image]) {
         _image = image;

@@ -1,6 +1,6 @@
 //
 //  RootViewController.m
-//  FLAnimatedImageDemo
+//  UFLAnimatedImageDemo
 //
 //  Created by Raphael Schaad on 4/1/14.
 //  Copyright (c) 2014 Flipboard. All rights reserved.
@@ -8,7 +8,7 @@
 
 
 #import "RootViewController.h"
-#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <UFLAnimatedImage/UFLAnimatedImage.h>
 #import "DebugView.h"
 
 
@@ -18,9 +18,9 @@
 @property (nonatomic, strong) UILabel *subtitleLabel;
 @property (nonatomic, strong) UIButton *memoryWarningButton;
 
-@property (nonatomic, strong) FLAnimatedImageView *imageView1;
-@property (nonatomic, strong) FLAnimatedImageView *imageView2;
-@property (nonatomic, strong) FLAnimatedImageView *imageView3;
+@property (nonatomic, strong) UFLAnimatedImageView *imageView1;
+@property (nonatomic, strong) UFLAnimatedImageView *imageView2;
+@property (nonatomic, strong) UFLAnimatedImageView *imageView3;
 
 // Views for the debug overlay UI
 @property (nonatomic, strong) DebugView *debugView1;
@@ -29,22 +29,22 @@
 
 @end
 
-// Internal properties on FLAnimatedImage and FLAnimatedImageView, only availabe in debug and used exclusively for the sample project.
+// Internal properties on UFLAnimatedImage and UFLAnimatedImageView, only availabe in debug and used exclusively for the sample project.
 #if defined(DEBUG) && DEBUG
 
-@interface FLAnimatedImage (Private)
+@interface UFLAnimatedImage (Private)
 @property (nonatomic, weak) id debug_delegate;
 @end
 
-@implementation FLAnimatedImage (Private)
+@implementation UFLAnimatedImage (Private)
 @dynamic debug_delegate;
 @end
 
-@interface FLAnimatedImageView (Private)
+@interface UFLAnimatedImageView (Private)
 @property (nonatomic, weak) id debug_delegate;
 @end
 
-@implementation FLAnimatedImageView (Private)
+@implementation UFLAnimatedImageView (Private)
 @dynamic debug_delegate;
 @end
 
@@ -65,11 +65,11 @@
     
     
     
-    // Setup the three `FLAnimatedImageView`s and load GIFs into them:
+    // Setup the three `UFLAnimatedImageView`s and load GIFs into them:
     
     // 1
     if (!self.imageView1) {
-        self.imageView1 = [[FLAnimatedImageView alloc] init];
+        self.imageView1 = [[UFLAnimatedImageView alloc] init];
         self.imageView1.contentMode = UIViewContentModeScaleAspectFill;
         self.imageView1.clipsToBounds = YES;
     }
@@ -78,12 +78,12 @@
     
     NSURL *url1 = [[NSBundle mainBundle] URLForResource:@"rock" withExtension:@"gif"];
     NSData *data1 = [NSData dataWithContentsOfURL:url1];
-    FLAnimatedImage *animatedImage1 = [FLAnimatedImage animatedImageWithGIFData:data1];
+    UFLAnimatedImage *animatedImage1 = [UFLAnimatedImage animatedImageWithGIFData:data1];
     self.imageView1.animatedImage = animatedImage1;
     
     // 2
     if (!self.imageView2) {
-        self.imageView2 = [[FLAnimatedImageView alloc] init];
+        self.imageView2 = [[UFLAnimatedImageView alloc] init];
         self.imageView2.contentMode = UIViewContentModeScaleAspectFill;
         self.imageView2.clipsToBounds = YES;
     }
@@ -91,7 +91,7 @@
     self.imageView2.frame = CGRectMake(0.0, 577.0, 379.0, 447.0);
     
     NSURL *url2 = [NSURL URLWithString:@"https://cloud.githubusercontent.com/assets/1567433/10417835/1c97e436-7052-11e5-8fb5-69373072a5a0.gif"];
-    [self loadAnimatedImageWithURL:url2 completion:^(FLAnimatedImage *animatedImage) {
+    [self loadAnimatedImageWithURL:url2 completion:^(UFLAnimatedImage *animatedImage) {
         self.imageView2.animatedImage = animatedImage;
 
         // Set up debug UI for image 2
@@ -106,7 +106,7 @@
     
     // 3
     if (!self.imageView3) {
-        self.imageView3 = [[FLAnimatedImageView alloc] init];
+        self.imageView3 = [[UFLAnimatedImageView alloc] init];
         self.imageView3.contentMode = UIViewContentModeScaleAspectFill;
         self.imageView3.clipsToBounds = YES;
     }
@@ -114,7 +114,7 @@
     self.imageView3.frame = CGRectMake(389.0, 577.0, 379.0, 447.0);
     
     NSURL *url3 = [NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"];
-    [self loadAnimatedImageWithURL:url3 completion:^(FLAnimatedImage *animatedImage) {
+    [self loadAnimatedImageWithURL:url3 completion:^(UFLAnimatedImage *animatedImage) {
         self.imageView3.animatedImage = animatedImage;
 
         // Set up debug UI for image 3
@@ -150,7 +150,7 @@
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:31.0];
         _titleLabel.textColor = [UIColor colorWithWhite:0.05 alpha:1.0];
-        _titleLabel.text = @"FLAnimatedImage Demo Player";
+        _titleLabel.text = @"UFLAnimatedImage Demo Player";
         [_titleLabel sizeToFit];
     }
     _titleLabel.backgroundColor = self.view.backgroundColor;
@@ -232,13 +232,13 @@
 /// Even though NSURLCache *may* cache the results for remote images, it doesn't guarantee it.
 /// Cache control headers or internal parts of NSURLCache's implementation may cause these images to become uncache.
 /// Here we enfore strict disk caching so we're sure the images stay around.
-- (void)loadAnimatedImageWithURL:(NSURL *const)url completion:(void (^)(FLAnimatedImage *animatedImage))completion
+- (void)loadAnimatedImageWithURL:(NSURL *const)url completion:(void (^)(UFLAnimatedImage *animatedImage))completion
 {
     NSString *const filename = url.lastPathComponent;
     NSString *const diskPath = [NSHomeDirectory() stringByAppendingPathComponent:filename];
     
     NSData * __block animatedImageData = [[NSFileManager defaultManager] contentsAtPath:diskPath];
-    FLAnimatedImage * __block animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:animatedImageData];
+    UFLAnimatedImage * __block animatedImage = [[UFLAnimatedImage alloc] initWithAnimatedGIFData:animatedImageData];
     
     if (animatedImage) {
         if (completion) {
@@ -247,7 +247,7 @@
     } else {
         [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             animatedImageData = data;
-            animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:animatedImageData];
+            animatedImage = [[UFLAnimatedImage alloc] initWithAnimatedGIFData:animatedImageData];
             if (animatedImage) {
                 if (completion) {
                     dispatch_async(dispatch_get_main_queue(), ^{

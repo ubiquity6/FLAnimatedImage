@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  FLAnimatedImageDemo
+//  UFLAnimatedImageDemo
 //
 //  Created by Raphael Schaad on 4/1/14.
 //  Copyright (c) 2014 Flipboard. All rights reserved.

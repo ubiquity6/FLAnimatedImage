@@ -1,5 +1,5 @@
 //
-//  FLAnimatedImage.h
+//  UFLAnimatedImage.h
 //  Flipboard
 //
 //  Created by Raphael Schaad on 7/8/13.
@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 // Allow user classes conveniently just importing one header.
-#import "FLAnimatedImageView.h"
+#import "UFLAnimatedImageView.h"
 
 
 #ifndef NS_DESIGNATED_INITIALIZER
@@ -21,15 +21,15 @@
     #endif
 #endif
 
-extern const NSTimeInterval kFLAnimatedImageDelayTimeIntervalMinimum;
+extern const NSTimeInterval kUFLAnimatedImageDelayTimeIntervalMinimum;
 
 //
-//  An `FLAnimatedImage`'s job is to deliver frames in a highly performant way and works in conjunction with `FLAnimatedImageView`.
+//  An `UFLAnimatedImage`'s job is to deliver frames in a highly performant way and works in conjunction with `UFLAnimatedImageView`.
 //  It subclasses `NSObject` and not `UIImage` because it's only an "image" in the sense that a sea lion is a lion.
 //  It tries to intelligently choose the frame cache size depending on the image and memory situation with the goal to lower CPU usage for smaller ones, lower memory usage for larger ones and always deliver frames for high performant play-back.
 //  Note: `posterImage`, `size`, `loopCount`, `delayTimes` and `frameCount` don't change after successful initialization.
 //
-@interface FLAnimatedImage : NSObject
+@interface UFLAnimatedImage : NSObject
 
 @property (nonatomic, strong, readonly) UIImage *posterImage; // Guaranteed to be loaded; usually equivalent to `-imageLazilyCachedAtIndex:0`
 @property (nonatomic, assign, readonly) CGSize size; // The `.posterImage`'s `.size`
@@ -46,10 +46,10 @@ extern const NSTimeInterval kFLAnimatedImageDelayTimeIntervalMinimum;
 // After an initial loading time, depending on `frameCacheSize`, frames should be available immediately from the cache.
 - (UIImage *)imageLazilyCachedAtIndex:(NSUInteger)index;
 
-// Pass either a `UIImage` or an `FLAnimatedImage` and get back its size
+// Pass either a `UIImage` or an `UFLAnimatedImage` and get back its size
 + (CGSize)sizeForImage:(id)image;
 
-// On success, the initializers return an `FLAnimatedImage` with all fields initialized, on failure they return `nil` and an error will be logged.
+// On success, the initializers return an `UFLAnimatedImage` with all fields initialized, on failure they return `nil` and an error will be logged.
 - (instancetype)initWithAnimatedGIFData:(NSData *)data;
 // Pass 0 for optimalFrameCacheSize to get the default, predrawing is enabled by default.
 - (instancetype)initWithAnimatedGIFData:(NSData *)data optimalFrameCacheSize:(NSUInteger)optimalFrameCacheSize predrawingEnabled:(BOOL)isPredrawingEnabled NS_DESIGNATED_INITIALIZER;
@@ -59,25 +59,25 @@ extern const NSTimeInterval kFLAnimatedImageDelayTimeIntervalMinimum;
 
 @end
 
-typedef NS_ENUM(NSUInteger, FLLogLevel) {
-    FLLogLevelNone = 0,
-    FLLogLevelError,
-    FLLogLevelWarn,
-    FLLogLevelInfo,
-    FLLogLevelDebug,
-    FLLogLevelVerbose
+typedef NS_ENUM(NSUInteger, UFLLogLevel) {
+    UFLLogLevelNone = 0,
+    UFLLogLevelError,
+    UFLLogLevelWarn,
+    UFLLogLevelInfo,
+    UFLLogLevelDebug,
+    UFLLogLevelVerbose
 };
 
-@interface FLAnimatedImage (Logging)
+@interface UFLAnimatedImage (Logging)
 
-+ (void)setLogBlock:(void (^)(NSString *logString, FLLogLevel logLevel))logBlock logLevel:(FLLogLevel)logLevel;
-+ (void)logStringFromBlock:(NSString *(^)(void))stringBlock withLevel:(FLLogLevel)level;
++ (void)setLogBlock:(void (^)(NSString *logString, UFLLogLevel logLevel))logBlock logLevel:(UFLLogLevel)logLevel;
++ (void)logStringFromBlock:(NSString *(^)(void))stringBlock withLevel:(UFLLogLevel)level;
 
 @end
 
-#define FLLog(logLevel, format, ...) [FLAnimatedImage logStringFromBlock:^NSString *{ return [NSString stringWithFormat:(format), ## __VA_ARGS__]; } withLevel:(logLevel)]
+#define UFLLog(logLevel, format, ...) [UFLAnimatedImage logStringFromBlock:^NSString *{ return [NSString stringWithFormat:(format), ## __VA_ARGS__]; } withLevel:(logLevel)]
 
-@interface FLWeakProxy : NSProxy
+@interface UFLWeakProxy : NSProxy
 
 + (instancetype)weakProxyForObject:(id)targetObject;
 

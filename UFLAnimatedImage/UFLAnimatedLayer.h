@@ -1,28 +1,28 @@
 //
-//  FLAnimatedCALayer.h
+//  UFLAnimatedCALayer.h
 //  Pods
 //
 //  Created by Nicolas Coderre on 10/31/18.
 //
 
-#ifndef FLAnimatedLayer_h
-#define FLAnimatedLayer_h
+#ifndef UFLAnimatedLayer_h
+#define UFLAnimatedLayer_h
 
 #import <UIKit/UIKit.h>
 #import <SceneKit/SceneKit.h>
 
-@class FLAnimatedImage;
-@protocol FLAnimatedImageViewDebugDelegate;
+@class UFLAnimatedImage;
+@protocol UFLAnimatedImageViewDebugDelegate;
 
 //
-//  An `FLAnimatedImageView` can take an `FLAnimatedImage` and plays it automatically when in view hierarchy and stops when removed.
+//  An `UFLAnimatedImageView` can take an `UFLAnimatedImage` and plays it automatically when in view hierarchy and stops when removed.
 //  The animation can also be controlled with the `UIImageView` methods `-start/stop/isAnimating`.
 //  It is a fully compatible `UIImageView` subclass and can be used as a drop-in component to work with existing code paths expecting to display a `UIImage`.
 //  Under the hood it uses a `CADisplayLink` for playback, which can be inspected with `currentFrame` & `currentFrameIndex`.
 //
-@interface FLAnimatedLayer : CALayer
+@interface UFLAnimatedLayer : CALayer
 
-@property (nonatomic, strong) FLAnimatedImage *animatedImage;
+@property (nonatomic, strong) UFLAnimatedImage *animatedImage;
 @property (nonatomic, copy) void(^loopCompletionBlock)(NSUInteger loopCountRemaining);
 
 @property (nonatomic, strong, readonly) UIImage *currentFrame;
@@ -32,7 +32,7 @@
 // To keep scrolling smooth on single-core devices such as iPhone 3GS/4 and iPod Touch 4th gen, the default run loop mode is NSDefaultRunLoopMode. Otherwise, the default is NSDefaultRunLoopMode.
 @property (nonatomic, copy) NSString *runLoopMode;
 
-- (instancetype)initWithAnimatedImage: (FLAnimatedImage*)animatedImage;
+- (instancetype)initWithAnimatedImage: (UFLAnimatedImage*)animatedImage;
 - (void)displayDidRefresh:(CADisplayLink *)displayLink;
 
 @end
@@ -40,4 +40,4 @@
 
 
 
-#endif /* FLAnimatedLayer_h */
+#endif /* UFLAnimatedLayer_h */

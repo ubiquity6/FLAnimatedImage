@@ -1,18 +1,18 @@
 //
-//  FLAnimatedLayer.m
+//  UFLAnimatedLayer.m
 //  Branch-SDK
 //
 //  Created by Nicolas Coderre on 10/31/18.
 //
 
 #import <Foundation/Foundation.h>
-#import "FLAnimatedLayer.h"
-#import "FLAnimatedImage.h"
+#import "UFLAnimatedLayer.h"
+#import "UFLAnimatedImage.h"
 #import <QuartzCore/QuartzCore.h>
 #import <sys/kdebug_signpost.h>
 
 
-@interface FLAnimatedLayer ()
+@interface UFLAnimatedLayer ()
 
 // Override of public `readonly` properties as private `readwrite`
 @property (nonatomic, strong, readwrite) UIImage *currentFrame;
@@ -27,7 +27,7 @@
 @end
 
 
-@implementation FLAnimatedLayer
+@implementation UFLAnimatedLayer
 @synthesize runLoopMode = _runLoopMode;
 
 #pragma mark - Initializers
@@ -41,7 +41,7 @@
     return self;
 }
 
-- (instancetype)initWithAnimatedImage: (FLAnimatedImage*)animatedImage {
+- (instancetype)initWithAnimatedImage: (UFLAnimatedImage*)animatedImage {
   self = [super init];
   if (self) {
     [self commonInit];
@@ -73,7 +73,7 @@
 #pragma mark - Accessors
 #pragma mark Public
 
-- (void)setAnimatedImage:(FLAnimatedImage *)animatedImage
+- (void)setAnimatedImage:(UFLAnimatedImage *)animatedImage
 {
     if (![_animatedImage isEqual:animatedImage]) {
         if (animatedImage) {
@@ -121,8 +121,8 @@
 
 - (NSTimeInterval)frameDelayGreatestCommonDivisor
 {
-    // Presision is set to half of the `kFLAnimatedImageDelayTimeIntervalMinimum` in order to minimize frame dropping.
-    const NSTimeInterval kGreatestCommonDivisorPrecision = 2.0 / kFLAnimatedImageDelayTimeIntervalMinimum;
+    // Presision is set to half of the `kUFLAnimatedImageDelayTimeIntervalMinimum` in order to minimize frame dropping.
+    const NSTimeInterval kGreatestCommonDivisorPrecision = 2.0 / kUFLAnimatedImageDelayTimeIntervalMinimum;
     
     NSArray *delays = self.animatedImage.delayTimesForIndexes.allValues;
     
@@ -167,7 +167,7 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
             // will retain its target until it is invalidated. We use a weak proxy so that the image view will get deallocated
             // independent of the display link's lifetime. Upon image view deallocation, we invalidate the display
             // link which will lead to the deallocation of both the display link and the weak proxy.
-            FLWeakProxy *weakProxy = [FLWeakProxy weakProxyForObject:self];
+            UFLWeakProxy *weakProxy = [UFLWeakProxy weakProxyForObject:self];
             self.displayLink = [CADisplayLink displayLinkWithTarget:weakProxy selector:@selector(displayDidRefresh:)];
             
             [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:self.runLoopMode];
@@ -218,7 +218,7 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
 - (void)displayDidRefresh:(CADisplayLink *)displayLink
 {
     kdebug_signpost_start(71, 0, 0, 0, 0);
-    /*  for (FLAnimatedImageView* obj in _liveViews) {
+    /*  for (UFLAnimatedImageView* obj in _liveViews) {
      [obj displayDidRefresh:nil];
      }*/
 
@@ -229,7 +229,7 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
         // If we have a nil image (e.g. waiting for frame), don't update the view nor playhead.
         UIImage *image = [self.animatedImage imageLazilyCachedAtIndex:self.currentFrameIndex];
         if (image) {
-            FLLog(FLLogLevelVerbose, @"Showing frame %lu for animated image: %@", (unsigned long)self.currentFrameIndex, self.animatedImage);
+            UFLLog(UFLLogLevelVerbose, @"Showing frame %lu for animated image: %@", (unsigned long)self.currentFrameIndex, self.animatedImage);
             
             self.contents = (__bridge id)image.CGImage;
             
@@ -264,7 +264,7 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
                 self.needsDisplayWhenImageBecomesAvailable = YES;
             }
         } else {
-            FLLog(FLLogLevelDebug, @"Waiting for frame %lu for animated image: %@", (unsigned long)self.currentFrameIndex, self.animatedImage);
+            UFLLog(UFLLogLevelDebug, @"Waiting for frame %lu for animated image: %@", (unsigned long)self.currentFrameIndex, self.animatedImage);
         }
     } else {
         self.currentFrameIndex++;

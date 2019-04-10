@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C22DAEC1BCABF4F006E1D3B /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C22DAE71BCABF4F006E1D3B /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C22DAED1BCABF4F006E1D3B /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DAE81BCABF4F006E1D3B /* FLAnimatedImage.m */; };
-		0C22DAEE1BCABF4F006E1D3B /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C22DAE91BCABF4F006E1D3B /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C22DAEF1BCABF4F006E1D3B /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DAEA1BCABF4F006E1D3B /* FLAnimatedImageView.m */; };
-		F210D6D8218B862F00C27017 /* FLAnimatedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F210D6D6218B862F00C27017 /* FLAnimatedLayer.m */; };
-		F210D6D9218B862F00C27017 /* FLAnimatedLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F210D6D7218B862F00C27017 /* FLAnimatedLayer.h */; };
+		0C22DAEC1BCABF4F006E1D3B /* UFLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C22DAE71BCABF4F006E1D3B /* UFLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C22DAED1BCABF4F006E1D3B /* UFLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DAE81BCABF4F006E1D3B /* UFLAnimatedImage.m */; };
+		0C22DAEE1BCABF4F006E1D3B /* UFLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C22DAE91BCABF4F006E1D3B /* UFLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C22DAEF1BCABF4F006E1D3B /* UFLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DAEA1BCABF4F006E1D3B /* UFLAnimatedImageView.m */; };
+		F210D6D8218B862F00C27017 /* UFLAnimatedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F210D6D6218B862F00C27017 /* UFLAnimatedLayer.m */; };
+		F210D6D9218B862F00C27017 /* UFLAnimatedLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F210D6D7218B862F00C27017 /* UFLAnimatedLayer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C22DAE71BCABF4F006E1D3B /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
-		0C22DAE81BCABF4F006E1D3B /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
-		0C22DAE91BCABF4F006E1D3B /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
-		0C22DAEA1BCABF4F006E1D3B /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		0C22DAE71BCABF4F006E1D3B /* UFLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFLAnimatedImage.h; sourceTree = "<group>"; };
+		0C22DAE81BCABF4F006E1D3B /* UFLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFLAnimatedImage.m; sourceTree = "<group>"; };
+		0C22DAE91BCABF4F006E1D3B /* UFLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFLAnimatedImageView.h; sourceTree = "<group>"; };
+		0C22DAEA1BCABF4F006E1D3B /* UFLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFLAnimatedImageView.m; sourceTree = "<group>"; };
 		0C22DAEB1BCABF4F006E1D3B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92C9BC0C1B199DC500D79B06 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F210D6D6218B862F00C27017 /* FLAnimatedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedLayer.m; sourceTree = "<group>"; };
-		F210D6D7218B862F00C27017 /* FLAnimatedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedLayer.h; sourceTree = "<group>"; };
+		F210D6D6218B862F00C27017 /* UFLAnimatedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFLAnimatedLayer.m; sourceTree = "<group>"; };
+		F210D6D7218B862F00C27017 /* UFLAnimatedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFLAnimatedLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,24 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C22DAE61BCABF4F006E1D3B /* FLAnimatedImage */ = {
+		0C22DAE61BCABF4F006E1D3B /* UFLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
-				F210D6D7218B862F00C27017 /* FLAnimatedLayer.h */,
-				F210D6D6218B862F00C27017 /* FLAnimatedLayer.m */,
-				0C22DAE71BCABF4F006E1D3B /* FLAnimatedImage.h */,
-				0C22DAE81BCABF4F006E1D3B /* FLAnimatedImage.m */,
-				0C22DAE91BCABF4F006E1D3B /* FLAnimatedImageView.h */,
-				0C22DAEA1BCABF4F006E1D3B /* FLAnimatedImageView.m */,
+				F210D6D7218B862F00C27017 /* UFLAnimatedLayer.h */,
+				F210D6D6218B862F00C27017 /* UFLAnimatedLayer.m */,
+				0C22DAE71BCABF4F006E1D3B /* UFLAnimatedImage.h */,
+				0C22DAE81BCABF4F006E1D3B /* UFLAnimatedImage.m */,
+				0C22DAE91BCABF4F006E1D3B /* UFLAnimatedImageView.h */,
+				0C22DAEA1BCABF4F006E1D3B /* UFLAnimatedImageView.m */,
 				0C22DAEB1BCABF4F006E1D3B /* Info.plist */,
 			);
-			path = FLAnimatedImage;
+			path = UFLAnimatedImage;
 			sourceTree = "<group>";
 		};
 		92C9BC021B199DC500D79B06 = {
 			isa = PBXGroup;
 			children = (
-				0C22DAE61BCABF4F006E1D3B /* FLAnimatedImage */,
+				0C22DAE61BCABF4F006E1D3B /* UFLAnimatedImage */,
 				92C9BC0D1B199DC500D79B06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,9 +74,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C22DAEE1BCABF4F006E1D3B /* FLAnimatedImageView.h in Headers */,
-				0C22DAEC1BCABF4F006E1D3B /* FLAnimatedImage.h in Headers */,
-				F210D6D9218B862F00C27017 /* FLAnimatedLayer.h in Headers */,
+				0C22DAEE1BCABF4F006E1D3B /* UFLAnimatedImageView.h in Headers */,
+				0C22DAEC1BCABF4F006E1D3B /* UFLAnimatedImage.h in Headers */,
+				F210D6D9218B862F00C27017 /* UFLAnimatedLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +120,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 92C9BC021B199DC500D79B06;
@@ -147,9 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C22DAED1BCABF4F006E1D3B /* FLAnimatedImage.m in Sources */,
-				0C22DAEF1BCABF4F006E1D3B /* FLAnimatedImageView.m in Sources */,
-				F210D6D8218B862F00C27017 /* FLAnimatedLayer.m in Sources */,
+				0C22DAED1BCABF4F006E1D3B /* UFLAnimatedImage.m in Sources */,
+				0C22DAEF1BCABF4F006E1D3B /* UFLAnimatedImageView.m in Sources */,
+				F210D6D8218B862F00C27017 /* UFLAnimatedLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

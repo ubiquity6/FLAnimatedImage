@@ -1,6 +1,6 @@
 //
 //  DebugView.m
-//  FLAnimatedImageDemo
+//  UFLAnimatedImageDemo
 //
 //  Created by Raphael Schaad on 4/1/14.
 //  Copyright (c) 2014 Flipboard. All rights reserved.
@@ -127,16 +127,16 @@
 
 
 #if defined(DEBUG) && DEBUG
-#pragma mark - FLAnimatedImageDebugDelegate
+#pragma mark - UFLAnimatedImageDebugDelegate
 
-- (void)debug_animatedImage:(FLAnimatedImage *)animatedImage didUpdateCachedFrames:(NSIndexSet *)indexesOfFramesInCache
+- (void)debug_animatedImage:(UFLAnimatedImage *)animatedImage didUpdateCachedFrames:(NSIndexSet *)indexesOfFramesInCache
 {
     self.frameCacheView.framesInCache = indexesOfFramesInCache;
 }
 #endif
 
 
-- (void)debug_animatedImage:(FLAnimatedImage *)animatedImage didRequestCachedFrame:(NSUInteger)index
+- (void)debug_animatedImage:(UFLAnimatedImage *)animatedImage didRequestCachedFrame:(NSUInteger)index
 {
     if (self.frameCacheView.requestedFrameIndex != index) {
         self.frameCacheView.requestedFrameIndex = index;
@@ -160,9 +160,9 @@
 }
 
 
-#pragma mark - FLAnimatedImageViewDebugDelegate
+#pragma mark - UFLAnimatedImageViewDebugDelegate
 
-- (void)debug_animatedImageView:(FLAnimatedImageView *)animatedImageView waitingForFrame:(NSUInteger)index duration:(NSTimeInterval)duration
+- (void)debug_animatedImageView:(UFLAnimatedImageView *)animatedImageView waitingForFrame:(NSUInteger)index duration:(NSTimeInterval)duration
 {
     self.currentFrameDelay += duration;
 }

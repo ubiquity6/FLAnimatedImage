@@ -1,13 +1,13 @@
 //
 //  DebugView.h
-//  FLAnimatedImageDemo
+//  UFLAnimatedImageDemo
 //
 //  Created by Raphael Schaad on 4/1/14.
 //  Copyright (c) 2014 Flipboard. All rights reserved.
 //
 
 
-#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <UFLAnimatedImage/UFLAnimatedImage.h>
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, DebugViewStyle) {
@@ -16,11 +16,11 @@ typedef NS_ENUM(NSUInteger, DebugViewStyle) {
 };
 
 
-// Conforms to private FLAnimatedImageDebugDelegate and FLAnimatedImageViewDebugDelegate protocols, used in sample project.
+// Conforms to private UFLAnimatedImageDebugDelegate and UFLAnimatedImageViewDebugDelegate protocols, used in sample project.
 @interface DebugView : UIView
 
-@property (nonatomic, weak) FLAnimatedImage *image;
-@property (nonatomic, weak) FLAnimatedImageView *imageView;
+@property (nonatomic, weak) UFLAnimatedImage *image;
+@property (nonatomic, weak) UFLAnimatedImageView *imageView;
 @property (nonatomic, assign) DebugViewStyle style;
 
 @end
