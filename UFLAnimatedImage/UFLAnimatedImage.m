@@ -228,7 +228,7 @@ static NSHashTable *allAnimatedImagesWeak;
         //     };
         // }
         NSDictionary *imageProperties = (__bridge_transfer NSDictionary *)CGImageSourceCopyProperties(_imageSource, NULL);
-        _loopCount = [[[imageProperties objectForKey:(id)kCGImagePropertyGIFDictionary] objectForKey:(id)kCGImagePropertyGIUFLoopCount] unsignedIntegerValue];
+        _loopCount = [[[imageProperties objectForKey:(id)kCGImagePropertyGIFDictionary] objectForKey:(id)kCGImagePropertyGIFLoopCount] unsignedIntegerValue];
         
         // Iterate through frame images
         size_t imageCount = CGImageSourceGetCount(_imageSource);
@@ -287,7 +287,7 @@ static NSHashTable *allAnimatedImagesWeak;
                         }
                         // Support frame delays as low as `kUFLAnimatedImageDelayTimeIntervalMinimum`, with anything below being rounded up to `kDelayTimeIntervalDefault` for legacy compatibility.
                         // To support the minimum even when rounding errors occur, use an epsilon when comparing. We downcast to float because that's what we get for delayTime from ImageIO.
-                        if ([delayTime floatValue] < ((float)kUFLAnimatedImageDelayTimeIntervalMinimum - UFLT_EPSILON)) {
+                        if ([delayTime floatValue] < ((float)kUFLAnimatedImageDelayTimeIntervalMinimum - FLT_EPSILON)) {
                             UFLLog(UFLLogLevelInfo, @"Rounding frame %zu's `delayTime` from %f up to default %f (minimum supported: %f).", i, [delayTime floatValue], kDelayTimeIntervalDefault, kUFLAnimatedImageDelayTimeIntervalMinimum);
                             delayTime = @(kDelayTimeIntervalDefault);
                         }
