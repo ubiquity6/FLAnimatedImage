@@ -21,7 +21,7 @@
 		0C22DAE91BCABF4F006E1D3B /* UFLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFLAnimatedImageView.h; sourceTree = "<group>"; };
 		0C22DAEA1BCABF4F006E1D3B /* UFLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFLAnimatedImageView.m; sourceTree = "<group>"; };
 		0C22DAEB1BCABF4F006E1D3B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92C9BC0C1B199DC500D79B06 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C9BC0C1B199DC500D79B06 /* UFLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UFLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F210D6D6218B862F00C27017 /* UFLAnimatedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFLAnimatedLayer.m; sourceTree = "<group>"; };
 		F210D6D7218B862F00C27017 /* UFLAnimatedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFLAnimatedLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +62,7 @@
 		92C9BC0D1B199DC500D79B06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92C9BC0C1B199DC500D79B06 /* FLAnimatedImage.framework */,
+				92C9BC0C1B199DC500D79B06 /* UFLAnimatedImage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,9 +83,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		92C9BC0B1B199DC500D79B06 /* FLAnimatedImage */ = {
+		92C9BC0B1B199DC500D79B06 /* UFLAnimatedImage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C9BC221B199DC600D79B06 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */;
+			buildConfigurationList = 92C9BC221B199DC600D79B06 /* Build configuration list for PBXNativeTarget "UFLAnimatedImage" */;
 			buildPhases = (
 				92C9BC071B199DC500D79B06 /* Sources */,
 				92C9BC081B199DC500D79B06 /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = FLAnimatedImage;
+			name = UFLAnimatedImage;
 			productName = FLAnimatedImage;
-			productReference = 92C9BC0C1B199DC500D79B06 /* FLAnimatedImage.framework */;
+			productReference = 92C9BC0C1B199DC500D79B06 /* UFLAnimatedImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92C9BC061B199DC500D79B06 /* Build configuration list for PBXProject "FLAnimatedImage" */;
+			buildConfigurationList = 92C9BC061B199DC500D79B06 /* Build configuration list for PBXProject "UFLAnimatedImage" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -128,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92C9BC0B1B199DC500D79B06 /* FLAnimatedImage */,
+				92C9BC0B1B199DC500D79B06 /* UFLAnimatedImage */,
 			);
 		};
 /* End PBXProject section */
@@ -283,7 +283,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92C9BC061B199DC500D79B06 /* Build configuration list for PBXProject "FLAnimatedImage" */ = {
+		92C9BC061B199DC500D79B06 /* Build configuration list for PBXProject "UFLAnimatedImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C9BC201B199DC600D79B06 /* Debug */,
@@ -292,7 +292,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C9BC221B199DC600D79B06 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */ = {
+		92C9BC221B199DC600D79B06 /* Build configuration list for PBXNativeTarget "UFLAnimatedImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C9BC231B199DC600D79B06 /* Debug */,

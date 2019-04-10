@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92C9BC0B1B199DC500D79B06"
-               BuildableName = "FLAnimatedImage.framework"
-               BlueprintName = "FLAnimatedImage"
-               ReferencedContainer = "container:FLAnimatedImage.xcodeproj">
+               BuildableName = "UFLAnimatedImage.framework"
+               BlueprintName = "UFLAnimatedImage"
+               ReferencedContainer = "container:UFLAnimatedImage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "92C9BC161B199DC600D79B06"
                BuildableName = "FLAnimatedImageTests.xctest"
                BlueprintName = "FLAnimatedImageTests"
-               ReferencedContainer = "container:FLAnimatedImage.xcodeproj">
+               ReferencedContainer = "container:UFLAnimatedImage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "92C9BC161B199DC600D79B06"
                BuildableName = "FLAnimatedImageTests.xctest"
                BlueprintName = "FLAnimatedImageTests"
-               ReferencedContainer = "container:FLAnimatedImage.xcodeproj">
+               ReferencedContainer = "container:UFLAnimatedImage.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92C9BC0B1B199DC500D79B06"
-            BuildableName = "FLAnimatedImage.framework"
-            BlueprintName = "FLAnimatedImage"
-            ReferencedContainer = "container:FLAnimatedImage.xcodeproj">
+            BuildableName = "UFLAnimatedImage.framework"
+            BlueprintName = "UFLAnimatedImage"
+            ReferencedContainer = "container:UFLAnimatedImage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92C9BC0B1B199DC500D79B06"
-            BuildableName = "FLAnimatedImage.framework"
-            BlueprintName = "FLAnimatedImage"
-            ReferencedContainer = "container:FLAnimatedImage.xcodeproj">
+            BuildableName = "UFLAnimatedImage.framework"
+            BlueprintName = "UFLAnimatedImage"
+            ReferencedContainer = "container:UFLAnimatedImage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92C9BC0B1B199DC500D79B06"
-            BuildableName = "FLAnimatedImage.framework"
-            BlueprintName = "FLAnimatedImage"
-            ReferencedContainer = "container:FLAnimatedImage.xcodeproj">
+            BuildableName = "UFLAnimatedImage.framework"
+            BlueprintName = "UFLAnimatedImage"
+            ReferencedContainer = "container:UFLAnimatedImage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
